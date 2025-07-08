@@ -239,7 +239,8 @@ def run(
         margin=0.5,
         overall_output_file="results.csv",
         batch_size=4,
-        patience=5
+        patience=5,
+        lr=2e-5,
 ):
     # load tokenizer
     print("loading tokenizer:", model_name)
@@ -280,7 +281,7 @@ def run(
     # run training
     print("start training")
     sat_model = SatisfactionModel(model_name=model_name).to(DEVICE)
-    optimizer = torch.optim.AdamW(sat_model.parameters(), lr=2e-5)
+    optimizer = torch.optim.AdamW(sat_model.parameters(), lr=lr)
     print("start training")
     train(model=sat_model, labeled_loader=sat_labeled_loader, pref_loader=preference_loader,
           validation_data=data['valid'],
@@ -330,6 +331,8 @@ if __name__ == "__main__":
                         help="Number of steps to make between making an evaluation on validation set.")
     parser.add_argument("--margin", type=float, required=True, default=0.5,
                         help="Margin to use for the margin ranking loss (calculated based on the pairwise data).")
+    parser.add_argument("--lr", type=float, required=True, default=2e-5,
+                        help="Learning rate.")
     parser.add_argument("--batch_size", type=int, required=True, default=4,
                         help="Batch size.")
     parser.add_argument("--patience", type=int, required=True, default=5,
