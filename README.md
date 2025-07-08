@@ -31,7 +31,7 @@ export EMBEDDING_API_VERSION=<YOUR_EMBEDDING_API_VERSION>
 ```shell
 python praise_exp.py --dataset_name mwoz
 ```
-6. To run PAIRSAT (our method), you should set the variables within
+6. Running PAIRSAT (our method):
 ```shell
 python pairsat_exp.py --dataset_name mwoz
 ```
