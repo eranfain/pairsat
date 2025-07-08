@@ -21,7 +21,10 @@ pip install -r requirements.txt
 3. Clone the anthropic_hh dataset to the `dataset/anthropic_hh` folder (follow the `readme.txt` file within the folder)
 4. To run PRAISE algorithm (baseline method), you should have an Azure environment with the following models enabled: `gpt-4-1106-preview`, `gpt-3.5-turbo-0125` and `text-embedding-3-large`. You should setup the following env variables:
 ```shell
-export 
+export AZURE_OPENAI_API_KEY=<YOUR_AZURE_OPENAI_API_KEY>
+export COMPLETION_ENDPOINT_URL=<YOUR_COMPLETION_ENDPOINT_URL>
+export EMBEDDING_ENDPOINT_URL=<YOUR_EMBEDDING_ENDPOINT_URL>
+export COMPLETION_API_VERSION=<YOUR_COMPLETION_API_VERSION>
 ```
 5. Running PRAISE algorithm:
 ```shell

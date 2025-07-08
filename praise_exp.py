@@ -14,21 +14,22 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics.pairwise import cosine_similarity
 from eval_utils import sat_evaluation
 
+# Get Azure-related variables
 subscription_key = os.getenv("AZURE_OPENAI_API_KEY")
 completion_endpoint = os.getenv("COMPLETION_ENDPOINT_URL")
+completion_api_version = os.getenv("COMPLETION_API_VERSION")
+emb_endpoint = os.getenv("EMBEDDING_ENDPOINT_URL")
+emb_api_version = os.getenv("EMBEDDING_API_VERSION")
 
 # Initialize Azure OpenAI client with key-based authentication
 completion_client = AzureOpenAI(
     azure_endpoint=completion_endpoint,
     api_key=subscription_key,
-    api_version="2025-01-01-preview",
+    api_version=completion_api_version,
 )
 
-emb_endpoint = os.getenv("EMBEDDING_ENDPOINT_URL")
-api_version = "2024-02-01"
-
 emb_client = AzureOpenAI(
-    api_version="2024-12-01-preview",
+    api_version=emb_api_version,
     azure_endpoint=emb_endpoint,
     api_key=subscription_key
 )
