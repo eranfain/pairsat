@@ -1,4 +1,4 @@
-# PAIRSAT - modeling user satisfaction using labeled and preference datasets
+# PAIRSAT - Integrating Preference-Based Signals for User Satisfaction Estimation in Dialogue Systems
 
 This is the Pytorch implementation of our work: **PAIRSAT: Integrating Preference-Based Signals for User Satisfaction Estimation in Dialogue Systems**.
 
