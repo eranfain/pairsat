@@ -35,6 +35,7 @@ python praise_exp.py --dataset_name mwoz
 ```shell
 python pairsat_exp.py --dataset_name mwoz
 ```
+7. To run our zero-shot and few-shot baselines, use the `gpt-zero-shot-few-shot.ipynb` notebook.
 
 ## Reference
 Our metrics and data loading implementations are based on [ASAP](https://github.com/smartyfh/asap#). We also leveraged the datasets preprocessed by ASAP.
