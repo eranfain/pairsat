@@ -39,3 +39,15 @@ python pairsat_exp.py --dataset_name mwoz
 
 ## Reference
 Our metrics and data loading implementations are based on [ASAP](https://github.com/smartyfh/asap#). We also leveraged the datasets preprocessed by ASAP.
+
+## Citation
+If you use this repository in your research, please cite our paper:
+```bibtext
+@inproceedings{fainman2025pairsat,
+  title={PAIRSAT: Integrating Preference-Based Signals for User Satisfaction Estimation in Dialogue Systems},
+  author={Fainman, Eran and Solomon, Adir and Mokryn, Osnat},
+  booktitle={Proceedings of the Nineteenth ACM Conference on Recommender Systems},
+  pages={1251--1255},
+  year={2025}
+}
+```
